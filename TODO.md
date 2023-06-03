@@ -1,0 +1,2 @@
+- Run a handshake between incompatible versions of iRODS to see what happens.
+- Run connection init using a different client auth scheme.
