@@ -1,0 +1,10 @@
+- type: Identifies the type of the message.
+	-  RODS_API_REPLY
+	-  RODS_API_REQ
+	-  RODS_VERSION
+	-  RODS_CONNECT
+	-  RODS_DISCONNECT
+- msgLen: the length in bytes of the message following the header, if there is one.
+- errorLen: the size in bites of an optional buffer for error messages (I think).
+- bsLen: the size in bytes of an optional buffer for any extra bytes to be transmitted (I think).
+- intInfo: an integer signifying either an error code or an api request number.

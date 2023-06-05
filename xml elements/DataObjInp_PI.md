@@ -1,0 +1,1 @@
+- objPath: the absolute logical path of the data object or collection being acted upon or queried. 

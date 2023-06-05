@@ -1,0 +1,1 @@
+- challenge: the dynamically generated challenge string sent to the client during handshake.

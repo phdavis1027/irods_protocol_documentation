@@ -1,0 +1,143 @@
+- maxRows: the max number of rows to return from the query.
+- continueInx: if non-zero, the inxIvalPair_t and inxValPair_t are ignored. The corresponding [GenQueryOut_PI](GenQueryOut_PI) will also have 0 for continueInx. 
+- rowOffset: if positive, instructs the server to only return rows with index greater than or equal to this value. 0-indexed.
+- options: a 32-bit integer bitmap for miscellaneous options.
+	- RETURN_TOTAL_ROW_COUNT (bit 0x20): If set, the corresponding [GenQueryOut_PI](GenQueryOut_PI) will include a field called totalRowCount, which reports the total number of rows matching the given query, ignoring rowOffset.
+	- NO_DISTINCT (bit 0x40) If set, the SQL query will not include the "distinct" key word.
+	- UPPER_CASE_WHERE (bit 0x200): if set, the "where" columns will be upper case.
+	- QUOTA_QUERY (bit 0x80): if set, do the special quota query (I have no idea what this means).
+	- AUTO_CLOSE (): if set, close out the SQL statement immediately even if more rows available. If there were more rows that could have been returned, the corresponding [GenQueryOut_PI](GenQueryOut_PI) will have continueInx set to -1. 
+- KeyValPair_PI (This is a very sloppy attempt at some vim magic but I'll clean it up as I run across these being used in the wild): represents a condInput structure, which holds many parameters. The key string is the parameter name.
+	- all
+	- copies
+	- execLocally
+	- forceFlag
+	- cliInSvrFirewall
+	- regChksum
+	- verifyChksum
+	- verifyBySize
+	- objPath
+	- rescName
+	- destRescName
+	- defRescName
+	- backupRescName
+	- leafRescNam
+	- dataType
+	- dataSiz
+	- chksu
+	- orig_chksu
+	- versio
+	- filePath
+	- bunFilePath
+	- replNum
+	- writeFlag
+	- replStatus
+	- allReplStatus
+	- metadataIncluded
+	- aclIncluded
+	- dataIncluded
+	- dataOwne
+	- dataOwnerZon
+	- dataExpir
+	- dataComment
+	- dataCreat
+	- dataModif
+	- dataAcces
+	- dataAccessIn
+	- noOpenFla
+	- phyOpenBySiz
+	- streamin
+	- dataI
+	- collI
+	- dataMod
+	- data_nam
+	- statusStrin
+	- dataMapI
+	- noParaOp
+	- localPat
+	- rsyncMod
+	- rsyncDestPat
+	- rsyncChksu
+	- ChksumAl
+	- forceChksu
+	- collectio
+	- irodsAdmi
+	- irodsAdminRmTras
+	- unre
+	- irodsRmTras
+	- recursiveOp
+	- collectionTyp
+	- collectionInfo
+	- collectionInfo
+	- collectionMtim
+	- selObjTyp
+	- structFileOp
+	- allMsPara
+	- unregColl
+	- updateRepl
+	- rbudpTransfer
+	- veryVerbose
+	- rbudpSendRate
+	- rbudpPackSize
+	- zone
+	- remoteZoneOp
+	- replDataObjIn
+	- replDataObjInp
+	- verifyVaultSizeEqualsDatabaseSiz
+	- queryByDataI
+	- suClientUse
+	- rmBunCop
+	- keyWord
+	- createMode
+	- openFlags
+	- offset
+	- defined
+	- numThreads
+	- oprType
+	- openTyp
+	- collFlags
+	- translatedPath
+	- noTranslateMntpt
+	- bulkOpr
+	- nonBulkOpr
+	- execCmdRule
+	- execMyRule
+	- streamStdout
+	- regRepl
+	- age
+	- dryrun
+	- no_compute
+	- aclCollection
+	- shouldbe use
+	- noChkCopyLen
+	- ticket
+	- purgeCache
+	- operation
+	- emptyBundleOnly
+	- replicaToke
+	- registerAsIntermediate
+	- staleAllIntermediateReplicas
+	- sourceL1Des
+	- backport45
+	- lockType
+	- UNLOCK_TYPE
+	- lockCmd
+	- GET_LOCK_CMD
+	- lockFd
+	- maxSubFile
+	- maxBunSize
+	- noStagin
+	- offiles fo
+	- maxSubFile
+
+	- fileUid
+	- fileOwner
+	- fileGid
+	- fileGroup
+	- fileMode
+	- fileCtime
+	- fileMtime
+	- fileSourcePath
+	- excludeFile
+
+- 
