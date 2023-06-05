@@ -1,1 +1,42 @@
+This is a generic object for data object operations. The meaning of these fields can change depending on the operation being requested by the intInfo field of the corresponding `<MsgHeader_PI>`
+
 - objPath: the absolute logical path of the data object or collection being acted upon or queried. 
+- createMode: a single bit indicating whether a data object or collection is being created.
+- openFlags: an integer bitmap representing file open options. Bit values and meanings are similar to their UNIX equivalents.
+	- O_RDONLY
+	- O_WRONLY
+	- O_RDWR
+	- O_TRUNC
+- offset
+- dataSize: in the context of a truncate operation, the size to which the data object will be truncated. In the context of a put operation, the size of the file being put. In the context of a stat operation, set to 0 (I would hazard this is true of most operations in which the size of the data object is unknown to the client at the time of issuing the command).
+- numThreads: the number of threads to use for the operation. 
+	- if 0, the server will decide how many threads to use.
+	- if -1, only one thread will be used.
+- oprType: the type of operation being performed.  Possible values (will format later):
+	-  DONE_OPR                9999
+	- PUT_OPR                 1
+	- GET_OPR                 2
+	- SAME_HOST_COPY_OPR      3
+	- COPY_TO_LOCAL_OPR       4
+	- COPY_TO_REM_OPR         5
+	- REPLICATE_OPR           6
+	- REPLICATE_DEST          7
+	- REPLICATE_SRC           8
+	- COPY_DEST               9
+	- COPY_SRC                10
+	- RENAME_DATA_OBJ         11
+	- RENAME_COLL             12
+	- MOVE_OPR                13
+	- RSYNC_OPR               14
+	- PHYMV_OPR               15
+	- PHYMV_SRC               16
+	- PHYMV_DEST              17
+	- QUERY_DATA_OBJ          18
+	- QUERY_DATA_OBJ_RECUR    19
+	- QUERY_COLL_OBJ          20
+	- QUERY_COLL_OBJ_RECUR    21
+	- RENAME_UNKNOWN_TYPE     22
+	- REMOTE_ZONE_OPR         24
+	- UNREG_OPR               26
+ - SpecColl_PI: Optional, only included if objPath points to a special collection (e.g., a mounted collection).
+ -  KeyValPair_PI: Optional, represents a CondInput struct.
