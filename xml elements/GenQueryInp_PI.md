@@ -1,7 +1,7 @@
 - maxRows: the max number of rows to return from the query.
 - continueInx: if non-zero, the inxIvalPair_t and inxValPair_t are ignored. The corresponding [GenQueryOut_PI](GenQueryOut_PI) will also have 0 for continueInx. 
 - rowOffset: if positive, instructs the server to only return rows with index greater than or equal to this value. 0-indexed.
-- options: a 32-bit integer bitmap for miscellaneous options.
+- options: a 32-bit integer bitmap for miscellaneous options. ^98fcd9
 	- RETURN_TOTAL_ROW_COUNT (bit 0x20): If set, the corresponding [GenQueryOut_PI](GenQueryOut_PI) will include a field called totalRowCount, which reports the total number of rows matching the given query, ignoring rowOffset.
 	- NO_DISTINCT (bit 0x40) If set, the SQL query will not include the "distinct" key word.
 	- UPPER_CASE_WHERE (bit 0x200): if set, the "where" columns will be upper case.

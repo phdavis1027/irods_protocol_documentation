@@ -1,0 +1,12 @@
+- objSize: The size of the data object. 0 if the stat is of a collection. 
+- objType: An integer representing whether the stat is of a collection or a data object. Values that can be confirmed:
+	- 0 - unknown object type
+	- 1 - data object
+	- 2 - collection
+- dataMode: I think these are permission triplets.
+- dataId: unique identifier of the data object or collection in the catalog.
+- chksum: left empty in the case of an `ils` 
+- ownerName: rodsuser who owns the data object or collection.
+- ownerZone: the zone of the rodsuser who owns the data object or collection.
+- createTime: UNIX
+- modifyTime: UNIX

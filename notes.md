@@ -1,0 +1,1 @@
+- 6/5/23: I'm getting the sneaking suspicion that the binary format of different PIs might just be the internal, binary representation of the corresponding structs in C
