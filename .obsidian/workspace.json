@@ -11,8 +11,12 @@
             "id": "50ec6d3dd4e3a2f5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "topical expositions/Let's talk about CS_NEG.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "topical expositions/Let's talk about CS_NEG.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "topical expositions/Let's talk about CS_NEG.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "topical expositions/Let's talk about CS_NEG.md"
+              }
             }
           }
         ]
@@ -140,34 +148,35 @@
   },
   "active": "50ec6d3dd4e3a2f5",
   "lastOpenFiles": [
-    "xml elements/GenQueryInp_PI.md",
-    "xml elements/specificQueryInp_PI.md",
-    "xml elements/RodsObjStat_PI.md",
-    "GenQueryInp_PO.md",
-    "TODO.md",
-    "xml.md",
+    "topical expositions/simple iget process.md",
     "intInfo values I have seen in the wild.md",
+    "xml elements/specificQueryInp_PI.md",
+    "topical expositions/Let's talk about CS_NEG.md",
+    "notes.md",
+    "topical expositions/Key Abbreviations.md",
+    "topical expositions/Init logic.md",
+    "\"Init.md",
+    "topical expositions/Basic iRODS Message Structure.md",
+    "xml elements/DataObjInp_PI.md",
     "xml elements/SqlResult_PI.md",
+    "xml elements/StartupPack_PI.md",
+    "xml elements/Version_PI.md",
+    "xml elements/RodsObjStat_PI.md",
+    "TODO.md",
+    "xml elements/GenQueryInp_PI.md",
+    "xml elements/KeyValPair_PI.md",
+    "GenQueryInp_PO.md",
+    "xml.md",
     "xml elements/GenQueryOut_PI.md",
     "xml elements/InxValPair_PI.md",
-    "xml elements/DataObjInp_PI.md",
     "().md",
-    "notes.md",
     "Untitled.canvas",
     "Untitled 1.canvas",
     "test workloads",
-    "topical expositions/Init logic.md",
-    "topical expositions/Key Abbreviations.md",
     "topical expositions/Glossary.md",
-    "topical expositions/Basic iRODS Message Structure.md",
     "Packing Instruction.md",
-    "xml elements/KeyValPair_PI.md",
     "xml elements/authResponseInp_PI.md",
     "xml elements/authRequestOut_PI.md",
-    "xml elements/MsgHeader_PI.md",
-    "xml elements/Version_PI.md",
-    "xml elements/StartupPack_PI.md",
-    "topical expositions/Connection Init Logic.md",
     "topical expositions",
     "xml elements",
     "topical expositions/test workloads"

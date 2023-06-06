@@ -1,4 +1,4 @@
-iRODS messages have three parts. These three parts are sent as separate transport packets. In order of transmission, they are:
+iRODS messages have five parts. These five parts are sent as separate transport packets. In order of transmission, they are:
 - Prelude: Required. 4 bytes indicating how long in bytes the header will be.
 - Header: Required. An XML element with the tag <MsgHeader_PI>. Here is an example: ```
 <MsgHeader_PI>
@@ -17,3 +17,5 @@ All headers will contain the same fields. Here is a description of each field:
 - Body/Message: Optional. An XML element which provides extra information about the operation described by the header. What XML element can appear here is constrained by the `type` field of the header. For example:
 	-  The iRODS server enforces that if a header's `type` is `RODS_CONNECT`, that message's body must be of type `StartupPack_PI`. 
 	-  If a client sends a header with type `RODS_API_REQ` and `intInfo` set to `633` (for `OBJ_STAT_AN`), it must be followed up by a body with type `DataObjInp_PI` providing enough information to locate the object whose stat is being requested. 
+ - BsBuf: Optional, from bsLen. An unformatted stream of bytes transmitted after certain API operations, e.g., for file transmission.
+ - ErrorBuf: Optional, from errorLen. An additional buffer for error information transmitted a fter bsBuf (find out in which order this happens).

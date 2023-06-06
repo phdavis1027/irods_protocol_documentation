@@ -1,4 +1,4 @@
-This is a generic object for data object operations. The meaning of these fields can change depending on the operation being requested by the intInfo field of the corresponding `<MsgHeader_PI>`
+This is a generic object for data object operations. The meaning of these fields can change depending on the operation being requested by the `intInfo` field of the corresponding `<MsgHeader_PI>`
 
 - objPath: the absolute logical path of the data object or collection being acted upon or queried. 
 - createMode: a single bit indicating whether a data object or collection is being created.
@@ -13,7 +13,7 @@ This is a generic object for data object operations. The meaning of these fields
 	- if 0, the server will decide how many threads to use.
 	- if -1, only one thread will be used.
 - oprType: the type of operation being performed.  Possible values (will format later):
-	-  DONE_OPR                9999
+	- DONE_OPR                9999
 	- PUT_OPR                 1
 	- GET_OPR                 2
 	- SAME_HOST_COPY_OPR      3
