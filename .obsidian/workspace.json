@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "topical expositions/Let's talk about CS_NEG.md",
+                "file": "notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "topical expositions/Let's talk about CS_NEG.md",
+                "file": "notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "topical expositions/Let's talk about CS_NEG.md",
+                "file": "notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "topical expositions/Let's talk about CS_NEG.md"
+                "file": "notes.md"
               }
             }
           }
@@ -148,11 +148,13 @@
   },
   "active": "50ec6d3dd4e3a2f5",
   "lastOpenFiles": [
+    "topical expositions/Let's talk about CS_NEG.md",
+    "xml elements/CsNeg_PI.md",
+    "TODO.md",
+    "notes.md",
     "topical expositions/simple iget process.md",
     "intInfo values I have seen in the wild.md",
     "xml elements/specificQueryInp_PI.md",
-    "topical expositions/Let's talk about CS_NEG.md",
-    "notes.md",
     "topical expositions/Key Abbreviations.md",
     "topical expositions/Init logic.md",
     "\"Init.md",
@@ -162,7 +164,6 @@
     "xml elements/StartupPack_PI.md",
     "xml elements/Version_PI.md",
     "xml elements/RodsObjStat_PI.md",
-    "TODO.md",
     "xml elements/GenQueryInp_PI.md",
     "xml elements/KeyValPair_PI.md",
     "GenQueryInp_PO.md",
@@ -176,7 +177,6 @@
     "topical expositions/Glossary.md",
     "Packing Instruction.md",
     "xml elements/authResponseInp_PI.md",
-    "xml elements/authRequestOut_PI.md",
     "topical expositions",
     "xml elements",
     "topical expositions/test workloads"
