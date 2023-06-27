@@ -7,3 +7,31 @@
  - 6/7/23: The question I have spent way too much time trying to answer today is: where in the world is the server sending these sids? Then, Alan told me that sid now means zone_key. Then, I looked a little closer at the ngrep output and realized that Ih was being stupid: *the client sends the key.* But okay, the client code that signs and sends the zone key has all these comments about how pure client should not actually be sending or signing zone keys. So my new question is: *why is this happening?* 
  - 6/7/23: Okay, I've given up on answering that question for now. I will now just look at the zone_key and signing process on the assumption that the non-exceptional codepath is taken. 
  - 6/7/23: cs_neg_t has another very weird implication from the perspective of a standardized protocol. That is, when the client sends it, the `result` field is just a plain old string, but when the server sends it back, the `result` field is formatted a list of keyVal pairs. Moreover, it's extremely odd that these kvps would be sent in the form of a plain old string when the protocol already has a series of xml elements dedicated to encoding kvps. 
+ - 6/20/23: Thinking about how to create these graphs, some things I care about are:
+	 - Who sent the message: server or client?
+	 - 
+
+
+Writing this simple python client to solidify understanding of iRODS protocol. Here's what's up:
+- I accidentally sent a RODS_VERSION instead of a RODS_CONNECT header, and the server responded with error code -6000 SYS_HEADER_TYPE_LEN_ERR
+- When that was corrected I got -15000 SYS_PACK_INSTRUCT_FORMAT_ERR
+- Wouldn't you know it, the protocol cares whatever order the XML elements are in. For example, if you send a BinBytesBuf_PI  with the `buflen` and `buf` elements in the wrong order (with `buf` first), the server just won't respond at all.
+
+- Here's another investigative question: What is the difference in syntax between parens and square brackets in the pack instruction syntax:
+	- Original hypothesis was that parens indicate raw pointers and brackets indicate c-style fixed-size arrays. Falsified by "MsParamArray_PI," which is defined as follows:
+ 
+	```
+	#define MsParamArray_PI "int paramLen; int oprType; struct *MsParam_PI[paramLen];"
+	```
+	
+	    but it corresponds to msParamArray_t, which is: 
+	 
+	    ```
+	    typedef struct MsParamArray {
+	    int len;
+	    int oprType;
+	    msParam_t **msParam;
+		} msParamArray_t;
+	```
+
+
