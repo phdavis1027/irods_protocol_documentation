@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xml elements/The Hashmap Types.md",
+                "file": "xml elements/SqlResult_PI.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "xml elements/The Hashmap Types.md",
+                "file": "xml elements/SqlResult_PI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "xml elements/The Hashmap Types.md",
+                "file": "xml elements/SqlResult_PI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "xml elements/The Hashmap Types.md"
+                "file": "xml elements/SqlResult_PI.md"
               }
             }
           }
@@ -161,8 +161,10 @@
   },
   "active": "61f69eb114da8141",
   "lastOpenFiles": [
-    "notes.md",
+    "xml elements/GenQueryOut_PI.md",
+    "xml elements/GenQueryInp_PI.md",
     "xml elements/The Hashmap Types.md",
+    "notes.md",
     "topical expositions/Let's talk about CS_NEG.md",
     "xml elements/CsNeg_PI.md",
     "TODO.md",
@@ -178,11 +180,9 @@
     "xml elements/StartupPack_PI.md",
     "xml elements/Version_PI.md",
     "xml elements/RodsObjStat_PI.md",
-    "xml elements/GenQueryInp_PI.md",
     "xml elements/KeyValPair_PI.md",
     "GenQueryInp_PO.md",
     "xml.md",
-    "xml elements/GenQueryOut_PI.md",
     "xml elements/InxValPair_PI.md",
     "().md",
     "Untitled.canvas",

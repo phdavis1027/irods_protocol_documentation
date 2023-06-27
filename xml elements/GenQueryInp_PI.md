@@ -1,4 +1,5 @@
 - maxRows: the max number of rows to return from the query.
+- partialStartIndex: even when set to a negative number, the server seems fine to ignore this. It also doesn't really appear in the corresponding C struct so I suspect this is vestigial.
 - continueInx: if non-zero, the inxIvalPair_t and inxValPair_t are ignored. The corresponding [GenQueryOut_PI](GenQueryOut_PI) will also have 0 for continueInx.  ^68db59
 - rowOffset: if positive, instructs the server to only return rows with index greater than or equal to this value. 0-indexed.
 - options: a 32-bit integer bitmap for miscellaneous options. ^98fcd9
