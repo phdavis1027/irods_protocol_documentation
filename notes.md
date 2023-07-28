@@ -16,6 +16,7 @@ Writing this simple python client to solidify understanding of iRODS protocol. H
 - I accidentally sent a RODS_VERSION instead of a RODS_CONNECT header, and the server responded with error code -6000 SYS_HEADER_TYPE_LEN_ERR
 - When that was corrected I got -15000 SYS_PACK_INSTRUCT_FORMAT_ERR
 - Wouldn't you know it, the protocol cares whatever order the XML elements are in. For example, if you send a BinBytesBuf_PI  with the `buflen` and `buf` elements in the wrong order (with `buf` first), the server just won't respond at all.
+- Weird note: the protocol doesn't seem to care about white space in most circumstances, BUT if the message body starts with a \n, then in fact you will get SYS_PACK_INSTRUCT_FORMAT_ERR. 
 
 - Here's another investigative question: What is the difference in syntax between parens and square brackets in the pack instruction syntax:
 	- Original hypothesis was that parens indicate raw pointers and brackets indicate c-style fixed-size arrays. Falsified by "MsParamArray_PI," which is defined as follows:
@@ -33,5 +34,3 @@ Writing this simple python client to solidify understanding of iRODS protocol. H
 	    msParam_t **msParam;
 		} msParamArray_t;
 	```
-
-
